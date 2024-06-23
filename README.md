@@ -1,2 +1,31 @@
-# MPU6050-Gyroscope-Accelerometer-sensor-interfacing-with-TM4C123G
-First of all, our project is to transfer the data coming from MPU6050 accelerometer and gyro sensor via TM4C123G development kit obtain to print a graphic or output from there. At first, we connect the TM4C123G development kit with the MPU6050 accelerometer and gyro sensor. From here, we connect the MPU6050 accelerometer and gyro sensor using the specific port of the M4 processor. Here, we use the I2C communication protocol for the communication between sensor and development card. This sensor provides data output over I2C bus protocol. That means, in order to read sensor values with to help of TM4C123G Tiva microcontroller, we are used the I2C module of TM4C123G microcontroller. Then we set the TM4C123G development card as master, MPU6050 accelerometer and gyro sensor as slave. We transfer the data to obtain the TM4C123G development kit thanks to the I2C communication protocol. We transfer this data our computer via UART. So far,We are doing the coding part through the keil using the C programming language. We are used the PL2303 UART to USB converter device to transfer the data from UART the computer. We are printed the data that to convert into graphs on the computer screen.
+# TM4C123G with MPU6050 for Gyroscope and Accelerometer Data Collection
+
+## Project Overview
+This project involves interfacing the TM4C123G Tiva C Launchpad with the MPU6050 sensor to read gyroscope and accelerometer data and transmit it to a computer via UART.
+
+## Components
+- TM4C123G Tiva C Launchpad
+- MPU6050 Gyroscope and Accelerometer Sensor
+- USB to Serial Converter
+- Connecting wires
+
+## Hardware Connections
+1. **MPU6050 to TM4C123G Tiva C Launchpad:**
+   - VCC to 3.3V
+   - GND to GND
+   - SDA to PA7
+   - SCL to PA6
+
+2. **TM4C123G Tiva C Launchpad to USB to Serial Converter:**
+   - PE4 (UART5_RX) to RX
+   - PE5 (UART5_TX) to TX
+   - GND to GND
+
+## Software Implementation
+### I2C Initialization
+```c
+void I2C_Init(void) {
+    // Enable I2C and GPIO clocks
+    // Configure GPIO pins for I2C
+    // Set I2C speed to 100 kHz
+}
